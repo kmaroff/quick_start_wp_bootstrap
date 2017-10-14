@@ -1,0 +1,84 @@
+$output-bourbon-deprecation-warnings: false //Ждём обновления node-bourbon до 5-й версии
+
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "navbar"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.loader
+  background: none repeat scroll 0 0 #ffffff
+  bottom: 0
+  height: 100%
+  left: 0
+  position: fixed
+  right: 0
+  top: 0
+  width: 100%
+  z-index: 9999
+  .loader_inner
+    background-image: url("/wp-content/themes/dacha/img/preloader.gif")
+    background-size: cover
+    background-repeat: no-repeat
+    background-posirion: center center
+    background-color: #fff
+    height: 60px
+    width: 60px
+    margin-top: -30px
+    margin-left: -30px
+    left: 50%
+    top: 50%
+    position: absolute
+
+.menu-item-has-children:hover .dropdown-menu
+  display: block
+  margin-top: 0
+
+.dropdown-menu>li>a
+  padding: 7px 10px
+  font-size: 1.6rem
+  transition: all .2s ease-in-out
+  &:hover
+    background-color: $accent
+    color: #fff
+
+@import "media" // Всегда в конце
